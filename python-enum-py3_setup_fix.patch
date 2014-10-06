@@ -1,0 +1,28 @@
+--- ./setup.py.py3_setup_fix	2014-10-06 14:50:58.345807216 +0200
++++ ./setup.py	2014-10-06 14:51:06.456180332 +0200
+@@ -13,6 +13,8 @@
+     """
+ 
+ import textwrap
++import sys
++print (sys.version)
+ 
+ from setuptools import setup, find_packages
+ 
+@@ -22,11 +24,15 @@ main_module_name = 'enum'
+ main_module = __import__(main_module_name)
+ version = main_module.__version__
+ 
+-main_module_doc = main_module.__doc__.decode('utf-8')
++if sys.version_info < (3,0,0):
++  main_module_doc = main_module.__doc__.decode('utf-8')
++else:
++  main_module_doc = main_module.__doc__
+ short_description, long_description = (
+     textwrap.dedent(desc).strip()
+     for desc in main_module_doc.split('\n\n', 1)
+     )
++  
+ 
+ 
+ setup(
