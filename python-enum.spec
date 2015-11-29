@@ -19,7 +19,7 @@ Patch0:     	%{name}-py3_setup_fix.patch
 URL:		http://pypi.python.org/pypi/enum/
 BuildRequires:	rpm-pythonprov
 # if py_postclean is used
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 %if %{with python2}
 BuildRequires:	python-distribute
 %endif
