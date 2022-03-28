@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Odporny typ wyliczeniowy dla Pythona
 # Name must match the python module/package name (as in 'import' statement)
 Name:		python-%{module}
 Version:	0.4.4
-Release:	1
+Release:	2
 License:	GPL or PSF
 Group:		Libraries/Python
 Source:		http://pypi.python.org/packages/source/e/%{module}/%{module}-%{version}.tar.gz
